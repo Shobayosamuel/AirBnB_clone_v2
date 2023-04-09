@@ -8,7 +8,7 @@ from fabric.decorators import runs_once
 
 
 @runs_once
-def generate_archive():
+def do_pack():
     '''Generates a .tgz archive from the contents of the web_static folder'''
     local("mkdir -p versions")
     archive_path = ("versions/web_static_{}.tgz"
