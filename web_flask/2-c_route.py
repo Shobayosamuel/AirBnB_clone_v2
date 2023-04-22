@@ -20,7 +20,7 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>', methods=['GET'], strict_slashes=False)
+@app.route('/c/<string:text>', methods=['GET'], strict_slashes=False)
 def display_c(text):
     """Return the page for this path"""
     ans = text.replace('_', " ")
