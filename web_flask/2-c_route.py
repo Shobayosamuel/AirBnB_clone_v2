@@ -3,8 +3,8 @@
     A script that starts a flask web application
     and routes it to different urls
 """
-
 from flask import Flask
+
 app = Flask(__name__)
 
 
