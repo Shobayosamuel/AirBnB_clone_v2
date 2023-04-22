@@ -24,7 +24,7 @@ def hbnb():
 def display_c(text):
     """Return the page for this path"""
     ans = text.replace('_', " ")
-    return f"C {ans}"
+    return "C %s" % ans
 
 
 if __name__ == "__main__":
