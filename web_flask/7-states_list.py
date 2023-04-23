@@ -10,15 +10,17 @@ from models import storage
 app = Flask(__name__)
 
 
-@app.teardown_appcontext
-def teardown_db(exception):
-    storage.close()
-
-
 @app.route('/states_list', strict_slashes=False)
 def state():
+    """Return the page for this path"""
     states = storage.all('State')
     return render_template('7-states_list.html', states=states)
+
+
+@app.teardown_appcontext
+def teardown_db(exception):
+    """Return the page for this path"""
+    storage.close()
 
 
 if __name__ == "__main__":
